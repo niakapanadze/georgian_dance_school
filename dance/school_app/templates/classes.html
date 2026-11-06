@@ -1,0 +1,70 @@
+
+{% extends 'base.html' %}
+
+{% block title %}კურსები | ცეკვის სტუდია{% endblock %}
+
+{% block content %}
+
+<section class="page-banner classes-banner">
+    <div class="container page-banner-content">
+        <p class="eyebrow light-eyebrow">იპოვე შენი მოწოდება</p>
+        <h1>ჩვენი <span>კურსები.</span></h1>
+        <p>სხვადასხვა მიმართულება, ერთი საერთო სიყვარული — ცეკვა.</p>
+    </div>
+</section>
+
+<section class="section-space">
+    <div class="container">
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">აირჩიე მიმართულება</p>
+                <h2>რომელი ცეკვა გიზიდავს?</h2>
+            </div>
+            <p>შეისწავლე მოძრაობა და აღმოაჩინე საკუთარი შესაძლებლობები.</p>
+        </div>
+
+        <div class="course-grid">
+            <article class="course-card">
+                <div class="course-photo course-photo-one"></div>
+                <div class="course-content">
+                    <span class="course-index">01</span>
+                    <h3>დაწყებითი</h3>
+                    <p>კლასები 1-4. იწყება 5 წლიდან.</p>
+                    <a href="{% url 'contact' %}" class="text-link">დაინტერესდი <span>↗</span></a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-photo course-photo-two"></div>
+                <div class="course-content">
+                    <span class="course-index">02</span>
+                    <h3>საკონცერტო</h3>
+                    <p>კლასები 5-12.</p>
+                    <a href="{% url 'contact' %}" class="text-link">დაინტერესდი <span>↗</span></a>
+                </div>
+            </article>
+
+            <article class="course-card">
+                <div class="course-photo course-photo-three"></div>
+                <div class="course-content">
+                    <span class="course-index">03</span>
+                    <h3>სამოყვარულო</h3>
+                    <p>18+</p>
+                    <a href="{% url 'contact' %}" class="text-link">დაინტერესდი <span>↗</span></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="simple-cta">
+    <div class="container">
+        <p class="eyebrow">მზად ხარ დასაწყებად?</p>
+        <h2>შემდეგი ნაბიჯი შენია.</h2>
+        <a href="{% url 'contact' %}" class="button button-gold">
+            დაგვიკავშირდი <span>↗</span>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

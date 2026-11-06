@@ -1,0 +1,93 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}მთავარი | ცეკვის სტუდია{% endblock %}
+
+{% block content %}
+
+<section class="home-hero">
+    <div class="hero-photo"></div>
+    <div class="hero-shade"></div>
+
+    <div class="container hero-inner">
+        <p class="eyebrow light-eyebrow">მოძრაობა. ემოცია. თავისუფლება.</p>
+
+        <h1>შენი რიტმი.<br><span>შენი ისტორია.</span></h1>
+
+        <p class="hero-copy">
+            აღმოაჩინე ცეკვის სილამაზე გარემოში,
+            სადაც ყოველი ნაბიჯი მნიშვნელოვანია.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="{% url 'classes' %}" class="button button-gold">
+                აღმოაჩინე კურსები <span>↗</span>
+            </a>
+            <a href="{% url 'about' %}" class="hero-text-link">
+                გაიცანი ჩვენი სტუდია
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-caption">
+        <span>მოძრაობის ხელოვნება</span>
+        <span>აღმოაჩინე საკუთარი თავი</span>
+    </div>
+</section>
+
+<section class="home-intro">
+    <div class="container intro-layout">
+        <p class="eyebrow">ჩვენი ფილოსოფია</p>
+
+        <div>
+            <h2>ცეკვა არ არის მხოლოდ ნაბიჯები.<br>
+                <span>ეს არის ის, რასაც გრძნობ.</span>
+            </h2>
+
+            <div class="intro-bottom">
+                <p>
+                    ჩვენ გვჯერა, რომ თითოეულ ადამიანს აქვს საკუთარი
+                    რიტმი. ჩვენი სტუდია გაძლევს სივრცეს, რომ ის
+                    აღმოაჩინო და თავისუფლად გამოხატო.
+                </p>
+
+                <a href="{% url 'about' %}" class="circle-link" aria-label="ჩვენ შესახებ">
+                    ↗
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="home-discover">
+    <div class="container discover-layout">
+        <div class="discover-image"></div>
+
+        <div class="discover-copy">
+            <p class="eyebrow">იპოვე შენი მიმართულება</p>
+            <h2>ყოველი მოძრაობა ახალი შესაძლებლობაა.</h2>
+            <p>
+                დაწყებითი, საკონცერტო თუ სამოყვარულო —
+                აირჩიე კურსი, რომელიც შენს ასაკს შეეფერება.
+            </p>
+            <a href="{% url 'classes' %}" class="button button-dark">
+                ნახე ყველა კურსი <span>↗</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="home-end">
+    <div class="container home-end-inner">
+        <img src="{% static 'images/logo.png' %}" class="home-logo" alt="Georgian Dance School">
+        <p class="eyebrow light-eyebrow">პირველი ნაბიჯი შენია</p>
+        <h2>დავიწყოთ შენი<br>ცეკვის ისტორია?</h2>
+        <a href="{% url 'contact' %}" class="button button-gold">
+            დაგვიკავშირდი <span>↗</span>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

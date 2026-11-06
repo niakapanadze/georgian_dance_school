@@ -1,0 +1,73 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ჩვენ შესახებ | ცეკვის სტუდია{% endblock %}
+
+{% block content %}
+
+<section class="page-banner about-banner">
+    <div class="container page-banner-content">
+        <p class="eyebrow light-eyebrow">ჩვენი ისტორია</p>
+        <h1>ცეკვა გვაერთიანებს.<br><span>ემოცია გვამოძრავებს.</span></h1>
+        <p>გაიცანი ადგილი, სადაც მოძრაობა ხელოვნებად იქცევა.</p>
+    </div>
+</section>
+
+<section class="section-space">
+    <div class="container about-layout">
+        <div class="about-photo"></div>
+
+        <div class="about-copy">
+            <img src="{% static 'images/logo.png' %}" class="about-logo" alt="Georgian Dance School">
+            <p class="eyebrow">ვინ ვართ ჩვენ</p>
+            <h2>სივრცე, სადაც შეგიძლია იყო საკუთარი თავი.</h2>
+            <p>
+                ჩვენი სტუდია აერთიანებს ადამიანებს, რომლებსაც
+                უყვართ ცეკვა და სურთ საკუთარი შესაძლებლობების
+                განვითარება.
+            </p>
+            <p>
+                ჩვენთვის მნიშვნელოვანია ტექნიკა, შემოქმედებითობა,
+                დისციპლინა და მეგობრული გარემო. გვინდა, რომ ყოველი
+                მოსწავლე სტუდიიდან ახალი გამოცდილებითა და
+                თავდაჯერებულობით გავიდეს.
+            </p>
+            <a href="{% url 'classes' %}" class="button button-dark">
+                გაიცანი კურსები <span>↗</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="values-band">
+    <div class="container values-layout">
+        <div>
+            <span class="value-number">01</span>
+            <h3>თავისუფლება</h3>
+            <p>გამოხატე საკუთარი თავი მოძრაობით.</p>
+        </div>
+        <div>
+            <span class="value-number">02</span>
+            <h3>განვითარება</h3>
+            <p>ისწავლე, ივარჯიშე და გაიზარდე.</p>
+        </div>
+        <div>
+            <span class="value-number">03</span>
+            <h3>ერთიანობა</h3>
+            <p>გახდი მეგობრული გუნდის ნაწილი.</p>
+        </div>
+    </div>
+</section>
+
+<section class="simple-cta">
+    <div class="container">
+        <p class="eyebrow">შემდეგი ნაბიჯი</p>
+        <h2>იპოვე შენი რიტმი.</h2>
+        <a href="{% url 'contact' %}" class="button button-gold">
+            დაგვიკავშირდი <span>↗</span>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

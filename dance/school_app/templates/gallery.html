@@ -1,0 +1,55 @@
+
+{% extends 'base.html' %}
+
+{% block title %}გალერეა | ცეკვის სტუდია{% endblock %}
+
+{% block content %}
+
+<section class="page-banner gallery-banner">
+    <div class="container page-banner-content">
+        <p class="eyebrow light-eyebrow">მოძრაობა კადრებში</p>
+        <h1>ჩვენი <span>გალერეა.</span></h1>
+        <p>ემოციები, ენერგია და მომენტები, რომლებიც გვაერთიანებს.</p>
+    </div>
+</section>
+
+<section class="section-space">
+    <div class="container">
+        <div class="gallery-heading">
+            <div>
+                <p class="eyebrow">ჩვენი სამყარო</p>
+                <h2>ცეკვა ყველა კადრში.</h2>
+            </div>
+        </div>
+
+        <div class="photo-grid">
+            <div class="photo-tile tile-one">
+                <span>კონცერტები</span>
+            </div>
+            <div class="photo-tile tile-two">
+                <span>გამზადება</span>
+            </div>
+            <div class="photo-tile tile-three">
+                <span>რეპტიცია</span>
+            </div>
+            <div class="photo-tile tile-four">
+                <span>ზბორები</span>
+            </div>
+            <div class="photo-tile tile-five">
+                <span>ჯილდოები</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="simple-cta">
+    <div class="container">
+        <p class="eyebrow">შენი ჯერია</p>
+        <h2>შემოდი ჩვენს სამყაროში.</h2>
+        <a href="{% url 'contact' %}" class="button button-gold">
+            დაგვიკავშირდი <span>↗</span>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

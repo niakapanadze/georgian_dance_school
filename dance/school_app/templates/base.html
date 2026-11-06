@@ -1,0 +1,66 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}ცეკვის სტუდია{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{% static '/static/images/ilogo.png' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container navbar">
+        <a href="{% url 'home' %}" class="brand">
+            <img src="/static/images/logo.png" class="brand-logo" alt="Dance School Logo">
+            <span class="brand-name">ცეკვის სტუდია<small>DANCE • ART • PASSION</small></span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="{% url 'home' %}" class="{% if request.path == '/' %}active{% endif %}">მთავარი</a>
+            <a href="{% url 'about' %}" class="{% if request.path == '/about/' %}active{% endif %}">ჩვენ შესახებ</a>
+            <a href="{% url 'classes' %}" class="{% if request.path == '/classes/' %}active{% endif %}">კურსები</a>
+            <a href="{% url 'gallery' %}" class="{% if request.path == '/gallery/' %}active{% endif %}">გალერეა</a>
+            <a href="{% url 'contact' %}" class="nav-contact {% if request.path == '/contact/' %}active{% endif %}">კონტაქტი <span>↗</span></a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-top">
+        <div>
+            <a href="{% url 'home' %}" class="brand footer-brand">
+                <img src="{% static 'images/logo.png' %}" class="footer-logo" alt="Georgian Dance School">
+                <span class="brand-name">ცეკვის სტუდია<small>DANCE • ART • PASSION</small></span>
+            </a>
+            <p class="footer-note">აღმოაჩინე საკუთარი რიტმი.</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="{% url 'about' %}">ჩვენ შესახებ</a>
+            <a href="{% url 'classes' %}">კურსები</a>
+            <a href="{% url 'gallery' %}">გალერეა</a>
+            <a href="{% url 'contact' %}">კონტაქტი</a>
+        </div>
+    </div>
+
+    <div class="container footer-bottom">
+        <span>© {% now "Y" %} ცეკვის სტუდია</span>
+        <span>შექმნილია სიყვარულით და მოძრაობით.</span>
+    </div>
+</footer>
+
+</body>
+</html>
